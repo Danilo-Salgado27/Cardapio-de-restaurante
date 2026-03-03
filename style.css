@@ -1,0 +1,129 @@
+/* Importando fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo com textura elegante */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b0f0f, #5c1a1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal estilo menu físico */
+.menu {
+    background: #fffaf5;
+    width: 100%;
+    max-width: 650px;
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border: 4px solid #d4af37; /* dourado */
+    position: relative;
+}
+
+/* Linha decorativa superior */
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+}
+
+/* Título principal */
+.menu h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #5c1a1b;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo */
+.subtitulo {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 35px;
+}
+
+/* Categorias */
+.menu h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #8b2e2f;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 6px;
+}
+
+/* Itens */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 8px;
+    border-bottom: 1px dashed #d4af37;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Nome do prato */
+.item span:first-child {
+    font-weight: 400;
+    color: #333;
+}
+
+/* Preço */
+.item span:last-child {
+    font-weight: 600;
+    color: #8b2e2f;
+}
+
+/* Hover sofisticado */
+.item:hover {
+    background-color: #8b2e2f;
+    border-radius: 8px;
+    padding-left: 15px;
+}
+
+.item:hover span {
+    color: #ffffff;
+}
+
+.item:hover span:last-child {
+    color: #ffd700;
+}
+
+/* Animação suave */
+.menu {
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
